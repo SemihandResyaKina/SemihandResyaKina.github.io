@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resya & Semih - Kına Gecesi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(rgba(40,0,0,0.85), rgba(20,0,0,0.95)),
+                  url('background.jpg'); /* <-- PUT YOUR GENERATED IMAGE NAME HERE */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #f5e6d3;
+    }
+
+    .overlay {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(3px);
+      background: rgba(60,0,0,0.55);
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4rem;
+      color: #f8d7a3;
+      margin-bottom: 10px;
+      text-shadow: 0 0 20px rgba(212,175,55,0.6);
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      font-weight: 400;
+      color: #ffd700;
+    }
+
+    .card {
+      max-width: 900px;
+      background: rgba(120,0,0,0.75);
+      border: 2px solid #d4af37;
+      border-radius: 25px;
+      padding: 60px 40px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.8);
+    }
+
+    .details {
+      font-size: 1.3rem;
+      line-height: 1.9;
+      margin-top: 20px;
+    }
+
+    .divider {
+      width: 120px;
+      height: 2px;
+      background: #d4af37;
+      margin: 40px auto;
+    }
+
+    .buttons {
+      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .btn {
+      padding: 14px 35px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease;
+      border: 2px solid #d4af37;
+    }
+
+    .btn-rsvp {
+      background: #d4af37;
+      color: #5a0000;
+    }
+
+    .btn-rsvp:hover {
+      background: #f8d7a3;
+    }
+
+    .btn-location {
+      background: transparent;
+      color: #ffd700;
+    }
+
+    .btn-location:hover {
+      background: rgba(212,175,55,0.2);
+    }
+
+    .footer {
+      margin-top: 50px;
+      font-size: 1.1rem;
+      color: #f8d7a3;
+    }
+
+    @media(max-width:768px){
+      h1 { font-size: 2.8rem; }
+      h2 { font-size: 1.5rem; }
+      .card { padding: 40px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay">
+    <div class="card">
+      <h1>Semih ve Resya</h1>
+      <h2>Kına Gecesine Davetlisiniz</h2>
+
+      <div class="details">
+        Sevinç ve onurla, kına, mutluluk gözyaşları ve Türk gelenekleriyle dolu
+        bu özel gecemizde sizleri de aramızda görmekten mutluluk duyarız.
+        <br><br>
+        <strong>Cuma, 17 Nisan 2026</strong><br>
+        Saat 18:00
+        <br><br>
+        Royal Bamyan Reception – Floor 2<br>
+        792/806 Heatherton Rd<br>
+        Springvale South, VIC 3172
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="buttons">
+        <!-- RSVP PHONE LINK -->
+        <a href="https://wa.me/61466362006" target="_blank" class="btn btn-rsvp">RSVP – Sevginar Yilmaz (WhatsApp)</a>
+
+        <!-- GOOGLE MAPS LOCATION LINK -->
+        <a href="https://www.google.com/maps/search/?api=1&query=Royal+Bamyan+Reception+792%2F806+Heatherton+Rd+Springvale+South+VIC+3172" 
+           target="_blank" 
+           class="btn btn-location">Konuma Git</a>
+      </div>
+
+      <div class="footer">
+        RSVP by March 31st, 2026<br>
+        +61 466 362 006
+      </div>
+
+    </div>
+  </div>
+
+  
+  <!-- Background Music -->
+  <audio id="bg-music" autoplay loop>
+    <source src="song.mp3" type="audio/mpeg">
+    Tarayıcınız audio elementini desteklemiyor.
+  </audio>
+
+  <script>
+    // Autoplay fix for some browsers
+    document.addEventListener("click", function () {
+      const music = document.getElementById("bg-music");
+      music.play();
+    }, { once: true });
+  </script>
+
+</body>
+</html>
